@@ -86,17 +86,19 @@
       <div class="sidebar-logo">
         <a href="index.html"><img src="assets/images/logo.svg" alt="Logo" /></a>
       </div>
-      <p class="text">Lorem ipsum dolor sit amet adipisicing elit. Sapiente fuga nisi rerum iusto intro.</p>
+      <p class="text">Navigate easily through our key pages.
+Use these quick links to explore important sections fast..</p>
       <!-- logo -->
       <div class="sidebar-menu">
-        <h5 class="menu-title">Quick Links</h5>
-        <ul>
-          <li><a href="javascript:void(0)">About Us</a></li>
-          <li><a href="javascript:void(0)">Our Team</a></li>
-          <li><a href="javascript:void(0)">Latest News</a></li>
-          <li><a href="javascript:void(0)">Contact Us</a></li>
-        </ul>
-      </div>
+  <h5 class="menu-title">Quick Links</h5>
+  <ul>
+    <li><a href="#services">About Us</a></li>
+    <li><a href="#team">Our Team</a></li>
+    <li><a href="#clients">Clients</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+  </ul>
+</div>
+
       <!-- menu -->
       <div class="sidebar-social align-items-center justify-content-center">
         <h5 class="social-title">Follow Us On</h5>
@@ -166,9 +168,9 @@
     Your browser does not support the video tag.
   </video>
 
-  <!-- Optional Overlay -->
+  <!-- Optional Overlay
   <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-              background: rgba(0, 0, 0, 0.558); z-index: 1;"></div>
+              background: rgba(0, 0, 0, 0.558); z-index: 1;"></div> -->
 
   <!-- Foreground Content -->
   <div style="position: relative; z-index: 2; height: 100%;">
@@ -217,6 +219,48 @@
     color: rgb(255, 255, 255);
   }
 </style>
+
+
+  <!-- ✅ Define Chatbot ID -->
+  <script>
+    window.chatbaseConfig = {
+      chatbotId: "tkge8shl60pi22m7du2pg6ij1veqddlu" // ✅ Replace if needed
+    };
+  </script>
+
+  <!-- ✅ Load Chatbase Embed Script -->
+  <script>
+    (function () {
+      if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...arguments) => {
+          if (!window.chatbase.q) {
+            window.chatbase.q = [];
+          }
+          window.chatbase.q.push(arguments);
+        };
+
+        window.chatbase = new Proxy(window.chatbase, {
+          get(target, prop) {
+            if (prop === "q") return target.q;
+            return (...args) => target(prop, ...args);
+          },
+        });
+      }
+
+      const onLoad = function () {
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "_nC2wIu40R8C7RdmPo5sg";
+        document.body.appendChild(script);
+      };
+
+      if (document.readyState === "complete") {
+        onLoad();
+      } else {
+        window.addEventListener("load", onLoad);
+      }
+    })();
+  </script>
 
 
 
@@ -363,8 +407,8 @@
             <div class="content">
               <h2 class="fw-bold">Our Services</h2>
               <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form.
+                We offer solutions tailored to your business needs.
+Explore our range of services designed to drive real results.
               </p>
             </div>
           </div>
@@ -375,7 +419,32 @@
     </div>
     <!--======  End Section Title Five ======-->
     <div class="container">
-      <div class="row">
+      <div class="row"><div class="col-lg-4 col-md-6">
+          <div class="single-services">
+            <div class="service-icon">
+              <i class="lni lni-protection"></i>
+            </div>
+            <div class="service-content">
+              <h4>Personalised Software Development</h4>
+              <p>
+                Solithub specializes in custom Windows software development, creating scalable and reliable applications for businesses across industries. From client-server solutions to productivity tools, we deliver high-quality software that boosts efficiency and user experience.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services">
+            <div class="service-icon">
+              <i class="lni lni-code"></i>
+            </div>
+            <div class="service-content">
+              <h4>Personalised Website Development</h4>
+              <p>
+                Solithub offers expert website development services, creating visually stunning, highly functional websites tailored to your business. We ensure seamless user experiences, optimized performance, and enhanced engagement across all devices. Boost your online presence with Solithub today!
+              </p>
+            </div>
+          </div>
+        </div>
         <div class="col-lg-4 col-md-6">
           <div class="single-services">
             <div class="service-icon">
@@ -415,19 +484,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="single-services">
-            <div class="service-icon">
-              <i class="lni lni-code"></i>
-            </div>
-            <div class="service-content">
-              <h4>Personalised Website Development</h4>
-              <p>
-                Solithub offers expert website development services, creating visually stunning, highly functional websites tailored to your business. We ensure seamless user experiences, optimized performance, and enhanced engagement across all devices. Boost your online presence with Solithub today!
-              </p>
-            </div>
-          </div>
-        </div>
+        
         <div class="col-lg-4 col-md-6">
           <div class="single-services">
             <div class="service-icon">
@@ -441,19 +498,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="single-services">
-            <div class="service-icon">
-              <i class="lni lni-protection"></i>
-            </div>
-            <div class="service-content">
-              <h4>Personalised Software Development</h4>
-              <p>
-                Solithub specializes in custom Windows software development, creating scalable and reliable applications for businesses across industries. From client-server solutions to productivity tools, we deliver high-quality software that boosts efficiency and user experience.
-              </p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </section>
@@ -479,11 +524,14 @@
 
 
   <!-- ============ Our Team Section ============ -->
-<div id="team" class="team-area section">
+<section id="team" class="team-area section ">
+  
+  <div style="height: 80px; margin-top: -80px;"></div>
+  
   <div class="container">
     <!-- Section Title -->
     <div class="row">
-      <div class="col-12 text-center mb-4">
+      <div class="col-12 text-center mb-4 pt-5">
         <h2 class="fw-bold">Our Team</h2>
         <p>A dedicated group focused on delivering results and driving your business forward.</p>
       </div>
@@ -545,8 +593,8 @@
               <h6>Meet our Clients</h6>
               <h2 class="fw-bold">Our Awesome Clients</h2>
               <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form.
+                We’re proud to work with industry-leading brands.
+Their trust drives our commitment to excellence every day.
               </p>
             </div>
           </div>
@@ -556,93 +604,86 @@
       <!-- container -->
     </div>
     <!--======  End Section Title Five ======-->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2 col-12">
-          <div class="clients-logos">
-            <div class="single-image">
-              <img src="assets/images/client-logo/graygrids.svg" alt="Brand Logo Images" />
-            </div>
-            <div class="single-image">
-              <img src="assets/images/client-logo/uideck.svg" alt="Brand Logo Images" />
-            </div>
-            <div class="single-image">
-              <img src="assets/images/client-logo/ayroui.svg" alt="Brand Logo Images" />
-            </div>
-            <div class="single-image">
-              <img src="assets/images/client-logo/lineicons.svg" alt="Brand Logo Images" />
-            </div>
-            <div class="single-image">
-              <img src="assets/images/client-logo/tailwindtemplates.svg" alt="Brand Logo Images" />
-            </div>
-            <div class="single-image">
-              <img src="assets/images/client-logo/ecomhtml.svg" alt="Brand Logo Images" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Brand Area -->
-<!-- ========================= contact-section start ========================= -->
-
-<div class="section-title-five mt-5">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="content text-center">
-          <h2 class="fw-bold">Contact</h2>
-          <p>Get in touch with us today to unlock your business's potential.</p>
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <div class="clients-logos d-flex flex-wrap justify-content-center gap-4">
+        <div class="single-image tile-bg">
+          <img src="assets/images/client-logo/mainlandlogo.png" alt="Brand Logo" />
+        </div>
+        <div class="single-image tile-bg">
+          <img src="assets/images/client-logo/spice.png" alt="Brand Logo" />
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<section id="contact" class="contact-section" style="margin-bottom: 40px;">
-  <div class="container">
-    <div class="row align-items-start">
-      
-      <!-- Left Column: Contact Info -->
-      <div class="col-md-6">
-        <!-- Contact Tile -->
-        <div class="contact-item text-center mb-4" style="border: 1px solid #ddd; padding: 10px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-          <div class="contact-icon mb-3">
-            <i class="lni lni-phone" style="font-size: 2rem;"></i>
-          </div>
-          <div class="contact-content">
-            <h4>Contact</h4>
-            <p>+1 (778) 723-0618</p>
-            <p>solithub24@gmail.com</p>
-          </div>
-        </div>
 
-        <!-- Address Tile -->
-        <div class="contact-item text-center mb-4" style="border: 1px solid #ddd; padding: 10px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-          <div class="contact-icon mb-3">
-            <i class="lni lni-map-marker" style="font-size: 2rem;"></i>
-          </div>
-          <div class="contact-content">
-            <h4>Address</h4>
-            <p>Surrey, British Columbia</p>
-            <p>Canada</p>
-          </div>
-        </div>
+  <!-- End Brand Area -->
+<!-- ========================= contact-section start ========================= -->
 
-        <!-- Schedule Tile -->
-        <div class="contact-item text-center" style="border: 1px solid #ddd; padding: 10px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-          <div class="contact-icon mb-3">
-            <i class="lni lni-alarm-clock" style="font-size: 2rem;"></i>
-          </div>
-          <div class="contact-content">
-            <h4>Schedule</h4>
-            <p>24 Hours / 7 Days Open</p>
-            <p>Office time: 10 AM - 8:30 PM</p>
+<div id="contact" class="position-relative">
+  <div style="height: 80px; margin-top: -80px;"></div>
+  <!-- Your actual content -->
+  <div class="section-title-five mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="content text-center">
+            <h2 class="fw-bold">Contact</h2>
+            <p>Get in touch with us today to unlock your business's potential.</p>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
-      <!-- Right Column: Google Map -->
+
+<!-- Left Column: Contact Info -->
+<div class="col-12">
+  <div class="contact-item-wrapper d-flex flex-wrap justify-content-between gap-5">
+
+    <!-- Contact Tile -->
+    <div class="contact-item text-center">
+      <div class="contact-icon mb-3">
+        <i class="lni lni-phone" style="font-size: 2rem;"></i>
+      </div>
+      <div class="contact-content">
+        <h4>Contact</h4>
+        <p>+1 (778) 723-0618</p>
+        <p>solithub24@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Address Tile -->
+    <div class="contact-item text-center">
+      <div class="contact-icon mb-3">
+        <i class="lni lni-map-marker" style="font-size: 2rem;"></i>
+      </div>
+      <div class="contact-content">
+        <h4>Address</h4>
+        <p>Surrey, British Columbia</p>
+        <p>Canada</p>
+      </div>
+    </div>
+
+    <!-- Schedule Tile -->
+    <div class="contact-item text-center">
+      <div class="contact-icon mb-3">
+        <i class="lni lni-alarm-clock" style="font-size: 2rem;"></i>
+      </div>
+      <div class="contact-content">
+        <h4>Schedule</h4>
+        <p>24 Hours / 7 Days Open</p>
+        <p>Office time: 10 AM - 8:30 PM</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
    
 
 <!-- ========================= contact-section end ========================= -->
@@ -692,19 +733,32 @@
               
             </div>
             <div class="col-lg-4 col-md-6 col-12">
-              <!-- Single Widget -->
-              <div class="footer-widget newsletter">
-                <h5>Subscribe</h5>
-                <p>Subscribe to our newsletter for the latest updates</p>
-                <form action="#" method="get" target="_blank" class="newsletter-form">
-                  <input name="EMAIL" placeholder="Email address" required="required" type="email" />
-                  <div class="button">
-                    <button class="sub-btn">
-                      <i class="lni lni-envelope"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
+  <!-- Contact Form Widget -->
+  <div class="footer-widget contact-form-widget">
+    <h5>Get in Touch</h5>
+    <p>Leave your email and phone number, and we'll contact you shortly.</p>
+    <form action="#" method="post" class="contact-mini-form">
+      <input 
+        name="email" 
+        type="email" 
+        placeholder="Your Email" 
+        required 
+      />
+      <input 
+        name="phone" 
+        type="tel" 
+        placeholder="Your Phone Number" 
+        required 
+      />
+      <div class="button mt-2">
+        <button type="submit" class="sub-btn">
+          <i class="lni lni-phone"></i> Contact Me
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
               <!-- End Single Widget -->
             </div>
           </div>
@@ -757,14 +811,7 @@
       overlayLeft.classList.add("open");
     });
 
-    //========= glightbox
-    GLightbox({
-      'href': 'https://youtu.be/CPXlNZDn3UA',
-      'type': 'video',
-      'source': 'youtube',
-      'width': 900,
-      'autoplayVideos': true,
-    });
+    
 
   </script>
 </body>
